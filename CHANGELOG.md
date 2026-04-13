@@ -17,6 +17,10 @@
 
 - fix: |Admin| 修复 `/admin/address` 与 `/admin/users` 在使用完整邮箱（query 长度超过 50 字节）作为搜索条件时报错 `D1_ERROR: LIKE or GLOB pattern too complex` 的问题，长查询自动改用 `instr()` 绕开 D1 的 LIKE pattern 长度限制（#956）
 
+### CI
+
+- ci: |Worker| 修复 pnpm v10 默认阻止依赖构建脚本导致 `build-backend` CI 失败的问题，添加 `onlyBuiltDependencies` 允许 `esbuild`、`workerd`、`sharp` 执行构建脚本
+
 ### Improvements
 
 - docs: |发送邮件 API| 明确 `/api/send_mail` 与 `/external/api/send_mail` 两个端点的认证方式差异，补充"地址 JWT"概念说明（#922）

@@ -17,6 +17,10 @@
 
 - fix: |Admin| Fix `D1_ERROR: LIKE or GLOB pattern too complex` on `/admin/address` and `/admin/users` when searching by full email address (query length pushes the LIKE pattern over D1's 50-byte limit). Long queries now fall back to `instr()` to bypass the LIKE pattern length cap (#956)
 
+### CI
+
+- ci: |Worker| Fix `build-backend` CI failure caused by pnpm v10 blocking dependency build scripts by default; add `onlyBuiltDependencies` to allow `esbuild`, `workerd`, and `sharp` to run build scripts
+
 ### Improvements
 
 - docs: |Send Mail API| Clarify authentication differences between `/api/send_mail` and `/external/api/send_mail`, add "Address JWT" concept explanation (#922)
