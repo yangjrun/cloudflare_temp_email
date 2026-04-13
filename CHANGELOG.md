@@ -19,7 +19,8 @@
 
 ### CI
 
-- ci: |Worker| 修复 pnpm v10 默认阻止依赖构建脚本导致 `build-backend` CI 失败的问题，添加 `onlyBuiltDependencies` 允许 `esbuild`、`workerd`、`sharp` 执行构建脚本
+- ci: |Worker| 修复 pnpm v10 默认阻止依赖构建脚本导致 CI 构建失败的问题，添加 `onlyBuiltDependencies` 允许 `esbuild`、`workerd`、`sharp` 执行构建脚本
+- ci: |Deploy| 修复 `backend_deploy` 部署失败时错误日志被 `>/dev/null 2>&1` 吞掉导致无法排查的问题
 
 ### Improvements
 

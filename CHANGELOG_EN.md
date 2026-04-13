@@ -19,7 +19,8 @@
 
 ### CI
 
-- ci: |Worker| Fix `build-backend` CI failure caused by pnpm v10 blocking dependency build scripts by default; add `onlyBuiltDependencies` to allow `esbuild`, `workerd`, and `sharp` to run build scripts
+- ci: |Worker| Fix CI build failure caused by pnpm v10 blocking dependency build scripts by default; add `onlyBuiltDependencies` to allow `esbuild`, `workerd`, and `sharp` to run build scripts
+- ci: |Deploy| Fix `backend_deploy` swallowing all error output with `>/dev/null 2>&1`, making deploy failures impossible to diagnose
 
 ### Improvements
 
